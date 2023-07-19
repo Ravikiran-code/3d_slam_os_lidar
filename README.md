@@ -30,9 +30,9 @@ The following ROS packages are required:
 # for melodic
 sudo apt-get install ros-melodic-geodesy ros-melodic-pcl-ros ros-melodic-nmea-msgs ros-melodic-libg2o
 cd catkin_ws/src
-git clone https://github.com/koide3/ndt_omp.git -b melodic
+git clone https://github.com/Ravikiran-code/norm_dist_trans_omp.git
 git clone https://github.com/SMRT-AIST/fast_gicp.git --recursive
-git clone https://github.com/koide3/hdl_graph_slam
+git clone https://github.com/Ravikiran-code/3d_slam_os_lidar.git
 
 cd .. && catkin_make -DCMAKE_BUILD_TYPE=Release
 
@@ -40,9 +40,9 @@ cd .. && catkin_make -DCMAKE_BUILD_TYPE=Release
 sudo apt-get install ros-noetic-geodesy ros-noetic-pcl-ros ros-noetic-nmea-msgs ros-noetic-libg2o
 
 cd catkin_ws/src
-git clone https://github.com/koide3/ndt_omp.git
+git clone https://github.com/Ravikiran-code/norm_dist_trans_omp.git
 git clone https://github.com/SMRT-AIST/fast_gicp.git --recursive
-git clone https://github.com/koide3/hdl_graph_slam
+git clone https://github.com/Ravikiran-code/3d_slam_os_lidar.git
 
 cd .. && catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
@@ -97,7 +97,7 @@ destination: 'path/file_name.pcd'"
 
 ```bash
   <node pkg="nodelet" type="nodelet" name="prefiltering_nodelet" ...
-    <remap from="/velodyne_points" to="/rslidar_points"/>
+    <remap from="/points" to="/velodyne_points"/>
   ...
 ```
 
